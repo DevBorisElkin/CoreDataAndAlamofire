@@ -8,7 +8,7 @@
 import Foundation
 
 fileprivate enum SettingsKeys: String{
-    case name, surname, gender
+    case name, surname, gender, userModel
 }
 
 class UserDefaultsHelper{
@@ -34,6 +34,21 @@ class UserDefaultsHelper{
             defaults.set(newValue.name, forKey: SettingsKeys.name.rawValue)
             defaults.set(newValue.surname, forKey: SettingsKeys.surname.rawValue)
             defaults.set(newValue.gender.rawValue, forKey: SettingsKeys.gender.rawValue)
+        }
+    }
+    
+    static var personDataAsModel: PersonData{
+        get{
+            guard let savedData = defaults.object(forKey: SettingsKeys.userModel.rawValue) as? Data, let decodedModel = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(savedData) as? PersonData else{
+                print("Couldn't person data from UserDefaults!")
+                return PersonData(name: "", surname: "", gender: .male)
+            }
+            return decodedModel
+        }
+        set{
+            if let decodedData = try? NSKeyedArchiver.archivedData(withRootObject: newValue, requiringSecureCoding: false){
+                defaults.set(decodedData, forKey: SettingsKeys.userModel.rawValue)
+            }
         }
     }
 }

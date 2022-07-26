@@ -28,9 +28,9 @@ class SaveLoadDataViewController: UIViewController {
     @IBAction func pressedSaveData(_ sender: Any) {
         print(#function)
         
-        var personData = gatherPersonDataFromFields()
+        let personData = gatherPersonDataFromFields()
         
-        UserDefaultsHelper.personData = personData
+        UserDefaultsHelper.personDataAsModel = personData
         print("personData: \(personData)")
         
     }
@@ -42,17 +42,17 @@ class SaveLoadDataViewController: UIViewController {
     }
     
     func gatherPersonDataFromFields() -> PersonData {
-        var personName = nameOutlet.text!
-        var personSurname = surnameOutlet.text!
+        let personName = nameOutlet.text!
+        let personSurname = surnameOutlet.text!
         
-        var selectedGenderString = gengerChoiceOutlet.titleForSegment(at: gengerChoiceOutlet.selectedSegmentIndex)
-        var selectedGenderEnum: Gender = selectedGenderString == "Male" ? .male : .female
+        let selectedGenderString = gengerChoiceOutlet.titleForSegment(at: gengerChoiceOutlet.selectedSegmentIndex)
+        let selectedGenderEnum: Gender = selectedGenderString == "Male" ? .male : .female
         
         return PersonData(name: personName, surname: personSurname, gender: selectedGenderEnum)
     }
     
     func loadDataFromMemory(){
-        var personData = UserDefaultsHelper.personData
+        let personData = UserDefaultsHelper.personDataAsModel
         setDataToFields(personData: personData)
     }
     
@@ -68,8 +68,29 @@ enum Gender: String{
     case female
 }
 
-struct PersonData{
+class PersonData: NSObject, NSCoding{
+    
     var name: String
     var surname: String
     var gender: Gender
+    
+    init(name: String, surname: String, gender: Gender){
+        self.name = name
+        self.surname = surname
+        self.gender = gender
+    }
+    
+    func encode(with coder: NSCoder) {
+        coder.encode(name, forKey: "name")
+        coder.encode(surname, forKey: "surname")
+        coder.encode(gender.rawValue, forKey: "gender")
+    }
+    
+    required init?(coder: NSCoder) {
+        name = coder.decodeObject(forKey: "name") as? String ?? "error"
+        surname = coder.decodeObject(forKey: "surname") as? String ?? "error"
+        gender = Gender(rawValue: coder.decodeObject(forKey: "gender") as! String) ?? .male
+    }
+    
+    
 }
