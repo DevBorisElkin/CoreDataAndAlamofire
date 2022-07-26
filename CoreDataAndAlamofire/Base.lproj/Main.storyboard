@@ -17,17 +17,17 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="sy0-vZ-j29"/>
+                        <segue destination="N73-5Q-EtU" kind="relationship" relationship="rootViewController" id="hYM-4R-sy5"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wAt-Jq-23L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-846" y="70"/>
         </scene>
-        <!--Main View Controller-->
+        <!--Table View With Diff Sections Example-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="CoreDataAndAlamofire" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TableViewWithDiffSectionsExample" customModule="CoreDataAndAlamofire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -63,7 +63,40 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="30" y="70"/>
+            <point key="canvasLocation" x="-30" y="767"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cgp-Ep-jbL">
+            <objects>
+                <viewController id="N73-5Q-EtU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ByT-cL-PzP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OMj-vh-w3Q">
+                                <rect key="frame" x="89" y="149" width="236" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="SyB-Do-tbH"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Table view with multiple sections"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="uN7-zm-lao"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fAJ-vW-C0t"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OMj-vh-w3Q" firstAttribute="centerX" secondItem="fAJ-vW-C0t" secondAttribute="centerX" id="DCJ-Hh-hPA"/>
+                            <constraint firstItem="OMj-vh-w3Q" firstAttribute="top" secondItem="fAJ-vW-C0t" secondAttribute="top" constant="61" id="LNv-l2-t1K"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7E0-jL-yfM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vI5-Xx-oZk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-30.434782608695656" y="69.642857142857139"/>
         </scene>
     </scenes>
     <resources>
