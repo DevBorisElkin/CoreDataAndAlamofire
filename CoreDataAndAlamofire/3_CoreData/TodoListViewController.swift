@@ -33,6 +33,30 @@ class TodoListViewController: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
     
+    
+    @IBAction func deleteTasks(_ sender: Any) {
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let fetchRequest: NSFetchRequest<Tasks> = Tasks.fetchRequest()
+        
+        if let tasks = try? context.fetch(fetchRequest){
+            for task in tasks {
+                context.delete(task)
+            }
+        }
+        
+        do {
+            try context.save()
+            // maybe just append element and not load from memory
+            // anyways I know that and that's a pet project
+            loadDataFromMemory()
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
+    }
+    
     func saveTask(withTitle title: String){
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext

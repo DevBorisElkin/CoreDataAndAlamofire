@@ -279,11 +279,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="ToDoList" id="RV7-3o-jas">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="iH4-sN-RO9">
-                            <connections>
-                                <action selector="onClicked_addItem:" destination="If5-aa-wMc" id="8td-xM-gGZ"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="iH4-sN-RO9">
+                                <connections>
+                                    <action selector="onClicked_addItem:" destination="If5-aa-wMc" id="8td-xM-gGZ"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="trash.fill" catalog="system" id="oFS-5p-p43">
+                                <connections>
+                                    <action selector="deleteTasks:" destination="If5-aa-wMc" id="FlD-jr-ho5"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="todoListTableView" destination="vvR-n7-Z8r" id="htX-mu-8vr"/>
@@ -295,6 +302,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="trash.fill" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
