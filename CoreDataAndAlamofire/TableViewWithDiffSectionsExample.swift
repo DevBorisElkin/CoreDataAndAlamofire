@@ -25,6 +25,8 @@ class TableViewWithDiffSectionsExample: UIViewController {
         reposTableView.dataSource = self
         
         createPhones()
+        
+        equatableTests()
     }
     
     func createPhones(){
@@ -58,7 +60,7 @@ extension TableViewWithDiffSectionsExample: UITableViewDelegate, UITableViewData
 //        return mobilePhones[section].companyName
 //    }
     
-    // MARK: for custom look of 'SectionName', load .xib file
+    // MARK: for custom look of 'SectionName', load .xib file or create 'look' with code
     // also note that sections can have footers
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 40))
@@ -76,9 +78,36 @@ extension TableViewWithDiffSectionsExample: UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 70
     }
-    
-    
-    
-    
 }
+
+// MARK: below tests with Equatable protocol
+
+func equatableTests(){
+    print("Equatable tests")
+    
+    var cat = Cat(name: "Barsik", age: 5)
+    var cat2 = Cat(name: "Barsik2", age: 5)
+    //var cat2 = cat
+    
+    if(cat == cat2){
+        print("Cats are equal")
+    }else{
+        print("Cat's are not equal")
+    }
+}
+
+class Cat: Equatable{
+    static func == (lhs: Cat, rhs: Cat) -> Bool {
+        lhs.age == rhs.age && lhs.name == rhs.name
+    }
+    
+    var name: String
+    var age: Int
+    
+    init(name: String, age: Int){
+        self.name = name
+        self.age = age
+    }
+}
+
 
