@@ -15,6 +15,8 @@
 		525B7EB5289009F00099C11C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 525B7EB3289009F00099C11C /* LaunchScreen.storyboard */; };
 		525B7EC0289028F00099C11C /* SaveLoadDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525B7EBF289028F00099C11C /* SaveLoadDataViewController.swift */; };
 		525B7EC3289032540099C11C /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525B7EC2289032540099C11C /* UserDefaultsHelper.swift */; };
+		525B7EC928908BDB0099C11C /* CoreDataExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 525B7EC728908BDB0099C11C /* CoreDataExample.xcdatamodeld */; };
+		525B7ECB28908E000099C11C /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525B7ECA28908E000099C11C /* TodoListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		525B7EB6289009F00099C11C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		525B7EBF289028F00099C11C /* SaveLoadDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveLoadDataViewController.swift; sourceTree = "<group>"; };
 		525B7EC2289032540099C11C /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
+		525B7EC828908BDB0099C11C /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		525B7ECA28908E000099C11C /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,15 +64,15 @@
 		525B7EA7289009ED0099C11C /* CoreDataAndAlamofire */ = {
 			isa = PBXGroup;
 			children = (
-				525B7EC1289032410099C11C /* Helpers */,
 				525B7EA8289009ED0099C11C /* AppDelegate.swift */,
 				525B7EAA289009ED0099C11C /* SceneDelegate.swift */,
-				525B7EAC289009ED0099C11C /* TableViewWithDiffSectionsExample.swift */,
-				525B7EAE289009ED0099C11C /* Main.storyboard */,
+				525B7EC428908B420099C11C /* 1_TableViewWithSections */,
+				525B7EC528908B5B0099C11C /* 2_UserDefaultsExample */,
+				525B7EC628908BB90099C11C /* 3_CoreData */,
 				525B7EB1289009F00099C11C /* Assets.xcassets */,
+				525B7EAE289009ED0099C11C /* Main.storyboard */,
 				525B7EB3289009F00099C11C /* LaunchScreen.storyboard */,
 				525B7EB6289009F00099C11C /* Info.plist */,
-				525B7EBF289028F00099C11C /* SaveLoadDataViewController.swift */,
 			);
 			path = CoreDataAndAlamofire;
 			sourceTree = "<group>";
@@ -79,6 +83,32 @@
 				525B7EC2289032540099C11C /* UserDefaultsHelper.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		525B7EC428908B420099C11C /* 1_TableViewWithSections */ = {
+			isa = PBXGroup;
+			children = (
+				525B7EAC289009ED0099C11C /* TableViewWithDiffSectionsExample.swift */,
+			);
+			path = 1_TableViewWithSections;
+			sourceTree = "<group>";
+		};
+		525B7EC528908B5B0099C11C /* 2_UserDefaultsExample */ = {
+			isa = PBXGroup;
+			children = (
+				525B7EC1289032410099C11C /* Helpers */,
+				525B7EBF289028F00099C11C /* SaveLoadDataViewController.swift */,
+			);
+			path = 2_UserDefaultsExample;
+			sourceTree = "<group>";
+		};
+		525B7EC628908BB90099C11C /* 3_CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				525B7EC728908BDB0099C11C /* CoreDataExample.xcdatamodeld */,
+				525B7ECA28908E000099C11C /* TodoListViewController.swift */,
+			);
+			path = 3_CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,10 +183,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				525B7EC3289032540099C11C /* UserDefaultsHelper.swift in Sources */,
+				525B7ECB28908E000099C11C /* TodoListViewController.swift in Sources */,
 				525B7EAD289009ED0099C11C /* TableViewWithDiffSectionsExample.swift in Sources */,
 				525B7EA9289009ED0099C11C /* AppDelegate.swift in Sources */,
 				525B7EC0289028F00099C11C /* SaveLoadDataViewController.swift in Sources */,
 				525B7EAB289009ED0099C11C /* SceneDelegate.swift in Sources */,
+				525B7EC928908BDB0099C11C /* CoreDataExample.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +404,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		525B7EC728908BDB0099C11C /* CoreDataExample.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				525B7EC828908BDB0099C11C /* Model.xcdatamodel */,
+			);
+			currentVersion = 525B7EC828908BDB0099C11C /* Model.xcdatamodel */;
+			path = CoreDataExample.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 525B7E9D289009ED0099C11C /* Project object */;
 }
