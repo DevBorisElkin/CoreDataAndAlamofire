@@ -242,7 +242,7 @@
             </objects>
             <point key="canvasLocation" x="-30.434782608695656" y="69.642857142857139"/>
         </scene>
-        <!--Todo List View Controller-->
+        <!--ToDoList-->
         <scene sceneID="kQa-Bn-In1">
             <objects>
                 <viewController id="If5-aa-wMc" customClass="TodoListViewController" customModule="CoreDataAndAlamofire" customModuleProvider="target" sceneMemberID="viewController">
@@ -278,7 +278,13 @@
                             <constraint firstItem="vvR-n7-Z8r" firstAttribute="leading" secondItem="3jy-wf-xmN" secondAttribute="leading" id="yjE-Ur-aQW"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="RV7-3o-jas"/>
+                    <navigationItem key="navigationItem" title="ToDoList" id="RV7-3o-jas">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="iH4-sN-RO9">
+                            <connections>
+                                <action selector="onClicked_addItem:" destination="If5-aa-wMc" id="8td-xM-gGZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="todoListTableView" destination="vvR-n7-Z8r" id="htX-mu-8vr"/>
                     </connections>
