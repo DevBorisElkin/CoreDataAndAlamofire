@@ -14,6 +14,11 @@ class TodoListViewController: UIViewController {
     
     @IBOutlet weak var todoListTableView: UITableView!
     
+    var context: NSManagedObjectContext{
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        return appDelegate.persistentContainer.viewContext
+    }
+    
     @IBAction func onClicked_addItem(_ sender: Any) {
         let alertController = UIAlertController(title: "Add new task", message: "Enter task name", preferredStyle: .alert)
         
@@ -33,11 +38,9 @@ class TodoListViewController: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
     
-    
     @IBAction func deleteTasks(_ sender: Any) {
         
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
+        let context = context
         
         let fetchRequest: NSFetchRequest<Tasks> = Tasks.fetchRequest()
         
@@ -58,8 +61,7 @@ class TodoListViewController: UIViewController {
     }
     
     func saveTask(withTitle title: String){
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
+        let context = context
         
         guard let entity = NSEntityDescription.entity(forEntityName: "Tasks", in: context) else { print("Error 228"); return }
         
@@ -74,13 +76,6 @@ class TodoListViewController: UIViewController {
         } catch let error as NSError {
             print(error.localizedDescription)
         }
-    }
-    
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
