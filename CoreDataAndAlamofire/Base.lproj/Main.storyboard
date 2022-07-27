@@ -224,15 +224,29 @@
                                     <segue destination="If5-aa-wMc" kind="show" id="wAK-JF-5Je"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMr-B6-JAl">
+                                <rect key="frame" x="113" y="378" width="188" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="bBB-uR-ety"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="172" id="myC-Qf-sVO"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Github API with alomofire"/>
+                                <connections>
+                                    <segue destination="GTd-KX-a7H" kind="show" id="SS0-kb-eQ9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fAJ-vW-C0t"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="VMr-B6-JAl" firstAttribute="centerX" secondItem="fAJ-vW-C0t" secondAttribute="centerX" id="0Ns-Of-6oF"/>
                             <constraint firstItem="rfR-rA-1h2" firstAttribute="centerX" secondItem="fAJ-vW-C0t" secondAttribute="centerX" id="6dz-QU-8gx"/>
                             <constraint firstItem="rfR-rA-1h2" firstAttribute="top" secondItem="luJ-Cz-Hx5" secondAttribute="bottom" constant="30" id="Ajx-1c-QYz"/>
                             <constraint firstItem="OMj-vh-w3Q" firstAttribute="centerX" secondItem="fAJ-vW-C0t" secondAttribute="centerX" id="DCJ-Hh-hPA"/>
                             <constraint firstItem="OMj-vh-w3Q" firstAttribute="top" secondItem="fAJ-vW-C0t" secondAttribute="top" constant="61" id="LNv-l2-t1K"/>
                             <constraint firstItem="luJ-Cz-Hx5" firstAttribute="centerX" secondItem="fAJ-vW-C0t" secondAttribute="centerX" id="N2m-Po-1nO"/>
+                            <constraint firstItem="VMr-B6-JAl" firstAttribute="top" secondItem="rfR-rA-1h2" secondAttribute="bottom" constant="26" id="UEh-u9-8Oz"/>
                             <constraint firstItem="luJ-Cz-Hx5" firstAttribute="top" secondItem="OMj-vh-w3Q" secondAttribute="bottom" constant="32" id="vhd-tw-pAA"/>
                         </constraints>
                     </view>
@@ -299,6 +313,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0gw-76-QB8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1414" y="767"/>
+        </scene>
+        <!--Github API with Alamofire-->
+        <scene sceneID="ibs-OL-inC">
+            <objects>
+                <viewController id="GTd-KX-a7H" customClass="GithubAPIViewController" customModule="CoreDataAndAlamofire" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fck-Zd-Hg8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6QI-ed-oYj">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="githubRepoCell" id="gNX-yG-Kw9">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gNX-yG-Kw9" id="3vz-qJ-k0s">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="GTd-KX-a7H" id="kPM-Hh-8mW"/>
+                                    <outlet property="delegate" destination="GTd-KX-a7H" id="Gas-5D-GEF"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="K02-Ck-rlN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6QI-ed-oYj" firstAttribute="top" secondItem="K02-Ck-rlN" secondAttribute="top" id="2V0-MS-CyH"/>
+                            <constraint firstItem="K02-Ck-rlN" firstAttribute="bottom" secondItem="6QI-ed-oYj" secondAttribute="bottom" id="6V1-1c-qZV"/>
+                            <constraint firstItem="K02-Ck-rlN" firstAttribute="trailing" secondItem="6QI-ed-oYj" secondAttribute="trailing" id="YCT-tw-Hky"/>
+                            <constraint firstItem="6QI-ed-oYj" firstAttribute="leading" secondItem="K02-Ck-rlN" secondAttribute="leading" id="bUU-ga-tM6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Github API with Alamofire" id="oko-v3-WGA"/>
+                    <connections>
+                        <outlet property="reposTableView" destination="6QI-ed-oYj" id="gq3-Nt-bCO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SVu-iB-xVL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2123" y="767"/>
         </scene>
     </scenes>
     <resources>
