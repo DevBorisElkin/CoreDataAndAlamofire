@@ -24,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="-846" y="70"/>
         </scene>
-        <!--Table View With Diff Sections Example-->
+        <!--Custom prototype cells-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="TableViewWithDiffSectionsExample" customModule="CoreDataAndAlamofire" customModuleProvider="target" sceneMemberID="viewController">
@@ -56,16 +56,16 @@
                             <constraint firstItem="YQw-a0-wdg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="a5k-xB-xyC"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ZCL-fg-F58"/>
+                    <navigationItem key="navigationItem" title="Custom prototype cells" id="ZCL-fg-F58"/>
                     <connections>
                         <outlet property="reposTableView" destination="YQw-a0-wdg" id="j34-7x-ifq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-30" y="767"/>
+            <point key="canvasLocation" x="-2138" y="795"/>
         </scene>
-        <!--Save Load Data View Controller-->
+        <!--UserDefaults-->
         <scene sceneID="0ba-Yg-Fhj">
             <objects>
                 <viewController id="Afh-6G-afL" customClass="SaveLoadDataViewController" customModule="CoreDataAndAlamofire" customModuleProvider="target" sceneMemberID="viewController">
@@ -163,7 +163,7 @@
                             <constraint firstItem="fge-5z-O30" firstAttribute="leading" secondItem="xEZ-Fz-Nu5" secondAttribute="leading" constant="30" id="zgU-QO-6UQ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="IMb-YI-LWY">
+                    <navigationItem key="navigationItem" title="UserDefaults" id="IMb-YI-LWY">
                         <barButtonItem key="rightBarButtonItem" title="Save" style="plain" id="6Ti-2M-WYP">
                             <connections>
                                 <action selector="pressedSaveData:" destination="Afh-6G-afL" id="LGz-hE-HI0"/>
@@ -178,7 +178,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eGL-zG-oFb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="682.60869565217399" y="766.74107142857144"/>
+            <point key="canvasLocation" x="-1426" y="795"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="cgp-Ep-jbL">
@@ -248,6 +248,18 @@
                                     <segue destination="edc-eP-nGe" kind="show" id="GoZ-Qo-jSb"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Sg-O1-riA">
+                                <rect key="frame" x="100.66666666666669" y="523" width="189" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="189" id="0CY-s0-Aga"/>
+                                    <constraint firstAttribute="height" constant="47" id="zc1-ff-742"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Alert Controller Examples"/>
+                                <connections>
+                                    <segue destination="cLw-tD-Pau" kind="show" id="dtF-AL-fd8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fAJ-vW-C0t"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -260,7 +272,9 @@
                             <constraint firstItem="OMj-vh-w3Q" firstAttribute="top" secondItem="fAJ-vW-C0t" secondAttribute="top" constant="61" id="LNv-l2-t1K"/>
                             <constraint firstItem="luJ-Cz-Hx5" firstAttribute="centerX" secondItem="fAJ-vW-C0t" secondAttribute="centerX" id="N2m-Po-1nO"/>
                             <constraint firstItem="VMr-B6-JAl" firstAttribute="top" secondItem="rfR-rA-1h2" secondAttribute="bottom" constant="26" id="UEh-u9-8Oz"/>
+                            <constraint firstItem="1Sg-O1-riA" firstAttribute="top" secondItem="U32-IQ-5Tc" secondAttribute="bottom" constant="24" id="VUZ-Du-uAR"/>
                             <constraint firstItem="U32-IQ-5Tc" firstAttribute="top" secondItem="VMr-B6-JAl" secondAttribute="bottom" constant="27" id="cOe-fm-2Vt"/>
+                            <constraint firstItem="1Sg-O1-riA" firstAttribute="centerX" secondItem="fAJ-vW-C0t" secondAttribute="centerX" id="tIP-ru-ghH"/>
                             <constraint firstItem="luJ-Cz-Hx5" firstAttribute="top" secondItem="OMj-vh-w3Q" secondAttribute="bottom" constant="32" id="vhd-tw-pAA"/>
                         </constraints>
                     </view>
@@ -270,7 +284,7 @@
             </objects>
             <point key="canvasLocation" x="-30.434782608695656" y="69.642857142857139"/>
         </scene>
-        <!--ToDoList-->
+        <!--CoreData ToDoList-->
         <scene sceneID="kQa-Bn-In1">
             <objects>
                 <viewController id="If5-aa-wMc" customClass="TodoListViewController" customModule="CoreDataAndAlamofire" customModuleProvider="target" sceneMemberID="viewController">
@@ -306,7 +320,7 @@
                             <constraint firstItem="vvR-n7-Z8r" firstAttribute="leading" secondItem="3jy-wf-xmN" secondAttribute="leading" id="yjE-Ur-aQW"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="ToDoList" id="RV7-3o-jas">
+                    <navigationItem key="navigationItem" title="CoreData ToDoList" id="RV7-3o-jas">
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="iH4-sN-RO9">
                                 <connections>
@@ -326,7 +340,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0gw-76-QB8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1414" y="767"/>
+            <point key="canvasLocation" x="-694" y="795"/>
         </scene>
         <!--Github API with Alamofire-->
         <scene sceneID="ibs-OL-inC">
@@ -371,9 +385,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SVu-iB-xVL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2123" y="767"/>
+            <point key="canvasLocation" x="14" y="795"/>
         </scene>
-        <!--View Controller-->
+        <!--Auto Layout Tests-->
         <scene sceneID="hmB-zp-xi3">
             <objects>
                 <viewController id="edc-eP-nGe" sceneMemberID="viewController">
@@ -382,7 +396,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QsH-oh-RRg" userLabel="BlueView">
-                                <rect key="frame" x="102" y="122" width="163" height="198"/>
+                                <rect key="frame" x="109" y="106" width="173" height="173"/>
                                 <color key="backgroundColor" systemColor="systemCyanColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="173" id="FJ5-Gp-O5c"/>
@@ -455,11 +469,106 @@
                             <constraint firstItem="QsH-oh-RRg" firstAttribute="centerX" secondItem="i0R-oP-NKy" secondAttribute="centerX" id="yEl-22-1sa"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="E9n-wA-YTW"/>
+                    <navigationItem key="navigationItem" title="Auto Layout Tests" id="E9n-wA-YTW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QKI-vj-OoG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2853.6231884057975" y="766.07142857142856"/>
+            <point key="canvasLocation" x="745" y="795"/>
+        </scene>
+        <!--Alert Controllers View Controller-->
+        <scene sceneID="Hiz-Pj-4Wx">
+            <objects>
+                <viewController id="cLw-tD-Pau" customClass="AlertControllersViewController" customModule="CoreDataAndAlamofire" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fNV-el-YOL">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJ4-Dm-lOx">
+                                <rect key="frame" x="34.999999999999986" y="157" width="210.66666666666663" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="210.66999999999999" id="5yY-yf-e0z"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="31" id="oye-kd-bnM"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Alert Controller with Warning"/>
+                                <connections>
+                                    <action selector="alertControllerWarning:" destination="cLw-tD-Pau" eventType="touchUpInside" id="gHm-Rk-1nw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fsQ-5A-58X">
+                                <rect key="frame" x="34" y="210" width="210" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="31" id="CwM-qs-dvl"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="210" id="Qv5-oV-5gg"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="test 1"/>
+                                <connections>
+                                    <action selector="test_1:" destination="cLw-tD-Pau" eventType="touchUpInside" id="NbN-vf-z20"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xoK-e7-rfN">
+                                <rect key="frame" x="34" y="260" width="210" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="31" id="FXn-yK-JTe"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="210" id="hh8-Qx-j6q"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="test 2"/>
+                                <connections>
+                                    <action selector="test_2:" destination="cLw-tD-Pau" eventType="touchUpInside" id="Ylc-ko-pYo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdE-xW-HAD">
+                                <rect key="frame" x="34" y="104" width="219" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="210.66999999999999" id="6Il-El-bYg"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="31" id="I3L-ep-cMp"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Alert Controller with text input"/>
+                                <connections>
+                                    <action selector="alertControllerWithMsgAndTextInput:" destination="cLw-tD-Pau" eventType="touchUpInside" id="aig-P6-buu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4u-Yk-h2l">
+                                <rect key="frame" x="35" y="310" width="210" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="31" id="Rn0-Pf-PF4"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="210" id="X9X-fp-84Y"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="test 3 - action sheet"/>
+                                <connections>
+                                    <action selector="test_3_actionSheet:" destination="cLw-tD-Pau" eventType="touchUpInside" id="h3h-m1-gKS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hd2-0W-gVl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hd2-0W-gVl" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="JdE-xW-HAD" secondAttribute="trailing" constant="137" id="1hk-QP-tve"/>
+                            <constraint firstItem="xoK-e7-rfN" firstAttribute="top" secondItem="fsQ-5A-58X" secondAttribute="bottom" constant="19" id="5Lz-Jy-qzQ"/>
+                            <constraint firstItem="hd2-0W-gVl" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="v4u-Yk-h2l" secondAttribute="trailing" constant="145" id="6Md-xJ-e6v"/>
+                            <constraint firstItem="v4u-Yk-h2l" firstAttribute="top" secondItem="xoK-e7-rfN" secondAttribute="bottom" constant="19" id="6bU-27-UGS"/>
+                            <constraint firstItem="v4u-Yk-h2l" firstAttribute="leading" secondItem="hd2-0W-gVl" secondAttribute="leading" constant="35" id="6gz-cc-0fd"/>
+                            <constraint firstItem="hd2-0W-gVl" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wJ4-Dm-lOx" secondAttribute="trailing" constant="144" id="B6Y-UG-biY"/>
+                            <constraint firstItem="hd2-0W-gVl" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fsQ-5A-58X" secondAttribute="trailing" constant="145" id="M28-Fs-J2p"/>
+                            <constraint firstItem="fsQ-5A-58X" firstAttribute="leading" secondItem="hd2-0W-gVl" secondAttribute="leading" constant="34" id="Nwv-Oq-DF2"/>
+                            <constraint firstItem="wJ4-Dm-lOx" firstAttribute="top" secondItem="JdE-xW-HAD" secondAttribute="bottom" constant="22" id="Qzg-Dd-8Yh"/>
+                            <constraint firstItem="wJ4-Dm-lOx" firstAttribute="leading" secondItem="hd2-0W-gVl" secondAttribute="leading" constant="35" id="RAG-Q8-JGG"/>
+                            <constraint firstItem="hd2-0W-gVl" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xoK-e7-rfN" secondAttribute="trailing" constant="145" id="SPX-qs-z9A"/>
+                            <constraint firstItem="JdE-xW-HAD" firstAttribute="leading" secondItem="hd2-0W-gVl" secondAttribute="leading" constant="34" id="cP2-Cw-eB6"/>
+                            <constraint firstItem="fsQ-5A-58X" firstAttribute="top" secondItem="wJ4-Dm-lOx" secondAttribute="bottom" constant="22" id="ex2-Hr-GsL"/>
+                            <constraint firstItem="JdE-xW-HAD" firstAttribute="top" secondItem="hd2-0W-gVl" secondAttribute="top" constant="16" id="nBh-uO-scE"/>
+                            <constraint firstItem="xoK-e7-rfN" firstAttribute="leading" secondItem="hd2-0W-gVl" secondAttribute="leading" constant="34" id="yeG-gw-cLx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="PMw-uL-IgA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fyf-ji-6C7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1484.6153846153845" y="794.78672985781986"/>
         </scene>
     </scenes>
     <resources>

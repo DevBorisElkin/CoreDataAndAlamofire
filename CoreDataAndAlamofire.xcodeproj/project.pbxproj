@@ -22,6 +22,8 @@
 		52D20BAF28915D2800287548 /* NetworkingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D20BAE28915D2800287548 /* NetworkingClient.swift */; };
 		52D20BB228915EB700287548 /* RepositoryOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D20BB128915EB700287548 /* RepositoryOwner.swift */; };
 		52D20BB428915ECE00287548 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D20BB328915ECE00287548 /* Repository.swift */; };
+		52D20BB72892B80000287548 /* AlertControllersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D20BB62892B80000287548 /* AlertControllersViewController.swift */; };
+		52D20BB92892B91200287548 /* AlertControllerHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D20BB82892B91200287548 /* AlertControllerHelpers.swift */; };
 		5FB4803E836CC002C64A56F4 /* Pods_CoreDataAndAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3CD799DE7CC90F90E8EC989 /* Pods_CoreDataAndAlamofire.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +46,8 @@
 		52D20BAE28915D2800287548 /* NetworkingClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingClient.swift; sourceTree = "<group>"; };
 		52D20BB128915EB700287548 /* RepositoryOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryOwner.swift; sourceTree = "<group>"; };
 		52D20BB328915ECE00287548 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		52D20BB62892B80000287548 /* AlertControllersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllersViewController.swift; sourceTree = "<group>"; };
+		52D20BB82892B91200287548 /* AlertControllerHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerHelpers.swift; sourceTree = "<group>"; };
 		C3CD799DE7CC90F90E8EC989 /* Pods_CoreDataAndAlamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoreDataAndAlamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2E7F9C89FE4905228D86747 /* Pods-CoreDataAndAlamofire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreDataAndAlamofire.release.xcconfig"; path = "Target Support Files/Pods-CoreDataAndAlamofire/Pods-CoreDataAndAlamofire.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,6 +101,7 @@
 				525B7EC528908B5B0099C11C /* 2_UserDefaultsExample */,
 				525B7EC628908BB90099C11C /* 3_CoreData */,
 				52D20BAB2891544D00287548 /* 4_Alamofire */,
+				52D20BB528924B3800287548 /* 5_AlertControllers */,
 				525B7EB1289009F00099C11C /* Assets.xcassets */,
 				525B7EAE289009ED0099C11C /* Main.storyboard */,
 				525B7EB3289009F00099C11C /* LaunchScreen.storyboard */,
@@ -156,6 +161,15 @@
 				52D20BB328915ECE00287548 /* Repository.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		52D20BB528924B3800287548 /* 5_AlertControllers */ = {
+			isa = PBXGroup;
+			children = (
+				52D20BB62892B80000287548 /* AlertControllersViewController.swift */,
+				52D20BB82892B91200287548 /* AlertControllerHelpers.swift */,
+			);
+			path = 5_AlertControllers;
 			sourceTree = "<group>";
 		};
 		BEBB7FAC1265D2CA03F0C5D1 /* Frameworks */ = {
@@ -286,11 +300,13 @@
 				525B7ECB28908E000099C11C /* TodoListViewController.swift in Sources */,
 				52D20BAF28915D2800287548 /* NetworkingClient.swift in Sources */,
 				525B7EAD289009ED0099C11C /* TableViewWithDiffSectionsExample.swift in Sources */,
+				52D20BB92892B91200287548 /* AlertControllerHelpers.swift in Sources */,
 				525B7EA9289009ED0099C11C /* AppDelegate.swift in Sources */,
 				52D20BB428915ECE00287548 /* Repository.swift in Sources */,
 				52D20BAD289154A200287548 /* GithubAPIViewController.swift in Sources */,
 				525B7EC0289028F00099C11C /* SaveLoadDataViewController.swift in Sources */,
 				525B7EAB289009ED0099C11C /* SceneDelegate.swift in Sources */,
+				52D20BB72892B80000287548 /* AlertControllersViewController.swift in Sources */,
 				525B7EC928908BDB0099C11C /* CoreDataExample.xcdatamodeld in Sources */,
 				52D20BB228915EB700287548 /* RepositoryOwner.swift in Sources */,
 			);
